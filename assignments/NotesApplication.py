@@ -13,8 +13,11 @@ class NotesApplication(object):
         if len(self.notes_list) < 1:
             print "Sorry list is empty!\n"
         else:
+            counter = 0
             for index, content in enumerate(self.notes_list):
                 print "Note ID: %d \n" %(index) + self.notes_list[index] + "\n\nBy Author  %s" %(self.author)
+                counter += 1
+                return counter
         note.user_choice()
 
     def get(self, note_id):
@@ -45,7 +48,7 @@ class NotesApplication(object):
             print "\nSorry wrong ID! View the list and select the right ID!\n"
         else:
             self.notes_list.pop(note_id)
-            print "\n Note successfully deleted!\n"
+            print "\nNote successfully deleted!\n"
         note.user_choice()
 
     def edit(self, note_id, new_content):
@@ -113,5 +116,5 @@ class NotesApplication(object):
             print "Sorry you selected an invalid number...select a number between 1 to 6\n"
             note.user_choice()
 
-note = NotesApplication("John Sani")
+note = NotesApplication(raw_input("Please enter Author's name: \n"))
 note.user_choice()
