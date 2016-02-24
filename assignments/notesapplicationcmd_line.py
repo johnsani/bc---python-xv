@@ -1,5 +1,4 @@
 class NotesApplication(object):
-    """docstring author NotesApplication"""
     """class that defines a note taking application
     Attributes: author: the author's name,
                 notes_list: A list containg all the notes
