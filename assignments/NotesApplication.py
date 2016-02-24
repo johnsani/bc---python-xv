@@ -9,7 +9,7 @@ class NotesApplication(object):
         self.notes_list = []
 
     def create(self, note_content):
-        """Creates neww note for user"""
+        """Creates new note for user"""
         if len(note_content) < 1:
             return False
         else:
